@@ -2,16 +2,14 @@ package mercado;
 
 public class Produtos {
 	
-	String carne ;
-	String frango;
-	String peixe;
+	static String carne ;
+	static String frango;
+	static String peixe;
+	static String item;
 	int quantidade;
 	int valor;
 	int total;
-	
-	
-	
-	
+		
 	
 	public String getCarne() {
 		return carne;
@@ -48,6 +46,12 @@ public class Produtos {
 	}
 	public void setTotal(int total) {
 		this.total = total;
+	}
+	public String getItem() {
+		return item;
+	}
+	public void setItem(String item) {
+		this.item = item;
 	}
 	
 	

@@ -1,22 +1,16 @@
 package mercado;
 
-import java.awt.event.ItemEvent;
 import java.util.Scanner;
 
-import javax.swing.plaf.synth.SynthSeparatorUI;
-
-public class Principal {
+public class Principal extends Produtos{
 
 	
-	
-	static String item;
 	
 	static Scanner digita = new Scanner(System.in);
 	
 	
 	public static void main(String[] args) {
-		
-				
+						
 		
 		CadCliente();
 		CadProduto();
@@ -42,47 +36,28 @@ public class Principal {
 		
 				
 	}
-		
+	
 		
 		public static void CadProduto(){
 			
 									
 			Produtos produto = new Produtos();
+												
 			
 			System.out.printf("\nInforme nome do produto: ");
-			item = digita.nextLine();
+			produto.setItem(digita.nextLine());
 			
 			System.out.printf("Informe a quantidade: ");
 			produto.setQuantidade(digita.nextInt());
+					
+			System.out.printf(" O produto escolhido foi: " + produto.getQuantidade() + " Kilos de " + produto.getItem());
+					
 			
-			
-		if (item == produto.carne) {
-						
-
-			System.out.printf(" O produto escolhido foi: " + produto.getQuantidade() + "Kilos de " + item);
-
 		}
-		if (item == produto.frango) {
-
-			System.out.printf(" O produto escolhido foi: " + produto.getQuantidade() + "Kilos de " + item);
-
-		}
-		if (item == produto.peixe) {
-
-			System.out.printf(" O produto escolhido foi: " + produto.getQuantidade() + "Kilos de " + item);
-
-		}else{
-			
-			System.out.printf("Nenhum produto escolhido: ");
-	
-		}
-		
-			
-		
 	}
 	
 	
-}
+
 		
 
 		
