@@ -37,24 +37,58 @@ public class Principal extends Produtos{
 				
 	}
 	
-		
+	//MÈtodo de cadastro dos produtos	
 		public static void CadProduto(){
 			
 									
 			Produtos produto = new Produtos();
 												
-			
+			//Inserindo nome do produto
 			System.out.printf("\nInforme nome do produto: ");
 			produto.setItem(digita.nextLine());
-			
+									
+			//Inserindo a quantidade do produto
 			System.out.printf("Informe a quantidade: ");
 			produto.setQuantidade(digita.nextInt());
+			
 					
-			System.out.printf(" O produto escolhido foi: " + produto.getQuantidade() + " Kilos de " + produto.getItem());
+			//Print do tipo de produto e sua quantidade
+			System.out.printf(" O produto escolhido foi: " + produto.getQuantidade() + " Kilos de " + produto.getItem() + "\n");
+			
+			
+			
+			if (digita.equals(carne)) {
+				System.out.printf("\n… carne");
+												
+			}
+			
+			if (digita.equals(frango)) {
+				System.out.printf("\n… frango\n");
+				
+			}
+							
+			
+			if (digita.equals(peixe)) {
+				
+				System.out.printf("\n… peixe\n");
+			
+			}
+			
+			else
+			
+			{
+				
+				System.out.printf("…\n" + produto.getItem());
+			}
+			
+ 	}
+			
 					
 			
-		}
 	}
+		
+		
+	
 	
 	
 

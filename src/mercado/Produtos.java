@@ -5,7 +5,7 @@ public class Produtos {
 	static String carne ;
 	static String frango;
 	static String peixe;
-	static String item;
+	String item;
 	int quantidade;
 	int valor;
 	int total;
@@ -14,20 +14,21 @@ public class Produtos {
 	public String getCarne() {
 		return carne;
 	}
-	public void setCarne(String carne) {
-		this.carne = carne;
+	public boolean setCarne(String carne) {
+		Produtos.carne = carne;
+		return false;
 	}
 	public String getFrango() {
 		return frango;
 	}
 	public void setFrango(String frango) {
-		this.frango = frango;
+		Produtos.frango = frango;
 	}
 	public String getPeixe() {
 		return peixe;
 	}
 	public void setPeixe(String peixe) {
-		this.peixe = peixe;
+		Produtos.peixe = peixe;
 	}
 	public int getQuantidade() {
 		return quantidade;
@@ -50,8 +51,9 @@ public class Produtos {
 	public String getItem() {
 		return item;
 	}
-	public void setItem(String item) {
+	public boolean setItem(String item) {
 		this.item = item;
+		return false;
 	}
 	
 	
