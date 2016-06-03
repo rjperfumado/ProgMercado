@@ -2,6 +2,7 @@ package mercado;
 
 import java.util.Scanner;
 
+
 public class Principal extends Produtos{
 
 	
@@ -14,6 +15,7 @@ public class Principal extends Produtos{
 		
 		CadCliente();
 		CadProduto();
+		CalculaPrecos();
 		
 	}
 	
@@ -53,37 +55,23 @@ public class Principal extends Produtos{
 			
 					
 			//Print do tipo de produto e sua quantidade
-			System.out.printf(" O produto escolhido foi: " + produto.getQuantidade() + " Kilos de " + produto.getItem() + "\n");
-			
-			
-			
-			if (digita.equals(carne)) {
-				System.out.printf("\n… carne");
-												
-			}
-			
-			if (digita.equals(frango)) {
-				System.out.printf("\n… frango\n");
-				
-			}
-							
-			
-			if (digita.equals(peixe)) {
-				
-				System.out.printf("\n… peixe\n");
-			
-			}
-			
-			else
-			
-			{
-				
-				System.out.printf("…\n" + produto.getItem());
-			}
-			
+			System.out.printf(" O produto escolhido foi: " + produto.getQuantidade() + " Kilos de " + produto.getItem());
+						
+		
  	}
 			
+			public static void CalculaPrecos(){
+				
+				
+				if (digita.equals(carne)) {
 					
+					total = quantidade * TabelaPrecos.tab_carne;
+					
+					
+					System.out.println("O valor È" + total);
+				}
+				
+			}
 			
 	}
 		

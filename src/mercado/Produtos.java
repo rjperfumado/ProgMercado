@@ -6,9 +6,9 @@ public class Produtos {
 	static String frango;
 	static String peixe;
 	String item;
-	int quantidade;
+	static int quantidade;
 	int valor;
-	int total;
+	static double total;
 		
 	
 	public String getCarne() {
@@ -34,7 +34,7 @@ public class Produtos {
 		return quantidade;
 	}
 	public void setQuantidade(int quantidade) {
-		this.quantidade = quantidade;
+		Produtos.quantidade = quantidade;
 	}
 	public int getValor() {
 		return valor;
@@ -42,11 +42,11 @@ public class Produtos {
 	public void setValor(int valor) {
 		this.valor = valor;
 	}
-	public int getTotal() {
+	public double getTotal() {
 		return total;
 	}
 	public void setTotal(int total) {
-		this.total = total;
+		Produtos.total = total;
 	}
 	public String getItem() {
 		return item;
